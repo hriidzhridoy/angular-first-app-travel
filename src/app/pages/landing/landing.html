@@ -1,0 +1,67 @@
+<div class="min-h-screen font-sans text-gray-900">
+  <!-- Navbar -->
+  <header class="flex items-center justify-between px-8 py-5 border-b">
+    <h1 class="text-xl font-extrabold">Travelify</h1>
+    <nav class="flex gap-6 items-center">
+      <a class="text-sm text-gray-600 hover:text-black" href="#">Destinations</a>
+      <a class="text-sm text-gray-600 hover:text-black" href="#">Tours</a>
+      <a class="text-sm text-gray-600 hover:text-black" href="#">Reviews</a>
+      <button class="px-4 py-2 rounded-xl bg-black text-white text-sm font-semibold">
+        Book Now
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section
+    class="relative px-8 py-28 bg-cover bg-center"
+    style="
+      background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80');
+    "
+  >
+    <div class="absolute inset-0 bg-black/50"></div>
+
+    <div class="relative max-w-3xl text-white">
+      <h2 class="text-5xl font-extrabold leading-tight">Discover your next adventure</h2>
+      <p class="mt-4 text-lg text-white/90">
+        Handpicked destinations, flexible packages, unforgettable journeys.
+      </p>
+
+      <div class="mt-8 flex gap-4">
+        <button class="px-6 py-3 rounded-xl bg-emerald-400 text-black font-bold">
+          Explore Destinations
+        </button>
+        <button class="px-6 py-3 rounded-xl border border-white/40 text-white">
+          View Packages
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="px-8 py-20 max-w-6xl mx-auto">
+    <h3 class="text-2xl font-bold mb-10">Why travel with us?</h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-6 border rounded-2xl">
+        <h4 class="font-bold mb-2">Handpicked Places</h4>
+        <p class="text-gray-600 text-sm">Top destinations chosen by experts.</p>
+      </div>
+
+      <div class="p-6 border rounded-2xl">
+        <h4 class="font-bold mb-2">Best Prices</h4>
+        <p class="text-gray-600 text-sm">Packages that fit every budget.</p>
+      </div>
+
+      <div class="p-6 border rounded-2xl">
+        <h4 class="font-bold mb-2">24/7 Support</h4>
+        <p class="text-gray-600 text-sm">We’re here whenever you need us.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t px-8 py-6 text-sm text-gray-500">
+    © {{ year }} Travelify. All rights reserved.
+  </footer>
+</div>
