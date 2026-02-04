@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { Navbar } from '../../shared/navbar/navbar';
 
 @Component({
   selector: 'app-destinations',
-  imports: [],
+  imports: [Navbar],
   templateUrl: './destinations.html',
   styleUrl: './destinations.css',
 })
-export class Destinations {
-
-}
+export class Destinations {}
