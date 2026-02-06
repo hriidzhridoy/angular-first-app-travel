@@ -1,22 +1,47 @@
 <app-navbar></app-navbar>
 
-<div class="px-8 py-16 max-w-6xl mx-auto">
-  <h1 class="text-3xl font-bold mb-8">Popular Destinations</h1>
+<div class="px-8 py-12 max-w-6xl mx-auto">
+  <div class="flex items-end justify-between gap-4 mb-8">
+    <div>
+      <h1 class="text-3xl font-bold">Popular Destinations</h1>
+      <p class="text-gray-600 mt-1">Pick a trip you’ll love—handpicked packages.</p>
+    </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-    <z-card>
-      <h3 class="font-bold text-lg">Bali</h3>
-      <p class="text-sm text-gray-600">Beaches & culture</p>
-    </z-card>
+    <button
+      class="hidden sm:inline-flex items-center gap-2 rounded-xl border px-4 py-2 text-sm hover:bg-gray-50"
+      type="button"
+    >
+      View all
+    </button>
+  </div>
 
-    <z-card>
-      <h3 class="font-bold text-lg">Paris</h3>
-      <p class="text-sm text-gray-600">Romance & food</p>
-    </z-card>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <z-card
+      *ngFor="let d of destinations; trackBy: trackByName"
+      class="overflow-hidden rounded-2xl"
+    >
+      <div class="relative aspect-[16/10]">
+        <img [src]="d.image" [alt]="d.name" class="h-full w-full object-cover" loading="lazy" />
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"
+        ></div>
 
-    <z-card>
-      <h3 class="font-bold text-lg">Tokyo</h3>
-      <p class="text-sm text-gray-600">City & nightlife</p>
+        <div class="absolute left-4 right-4 bottom-4">
+          <h3 class="text-white font-bold text-lg">{{ d.name }}</h3>
+          <p class="text-white/80 text-sm">{{ d.tagline }}</p>
+        </div>
+      </div>
+
+      <div class="p-4 flex items-center justify-between gap-4">
+        <div class="text-sm text-gray-700">
+          <span class="font-medium">{{ d.days }}</span> days
+        </div>
+
+        <div class="text-right">
+          <p class="text-xs text-gray-500">From</p>
+          <p class="font-bold text-lg">${{ d.priceFrom }}</p>
+        </div>
+      </div>
     </z-card>
   </div>
 </div>
